@@ -3,8 +3,5 @@
     height: 50px;
     border: 1px solid black;
     border-radius: 1em;
-    background-color: rgb(203, 204, 205);;
-}
-.cell:hover{
-    background-color: chartreuse;
+    background: rgb(203, 204, 205);
 }

@@ -90,6 +90,9 @@ function App() {
         <button>
           go
         </button>
+        <button>
+          clear
+        </button>
       </div>
 
     </div>
