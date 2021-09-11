@@ -70,8 +70,13 @@ const Cell = (props) => {
             }
         }
         
-        
-
+        if(props.mode == 'clear') {
+            if(selected){
+                setRole('node')
+                setSelected(false)
+                cellDiv.style.backgroundColor = "rgb(203, 204, 205)";
+            }
+        }
     }
 
     return(

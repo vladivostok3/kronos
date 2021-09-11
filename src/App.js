@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Gridx from './components/grid/Gridx';
 import useWindowDimensions from './util/windowhelper';
+import { Button } from '@material-ui/core';
 
 
 //import Canvas from './components/Canvas/Canvas';
@@ -8,7 +9,8 @@ import './App.css';
 
 
 function App() {
-  const [mode, setMode] = useState("neutral")
+  const [mode, setMode] = useState("neutral");
+
 
   useEffect(() => {
     console.log(mode)
@@ -54,6 +56,10 @@ function App() {
     }
   }
   
+  const toggleClearSelect = () => {
+    
+      setMode("clear");
+  }
 
   return (
     <div className="App">
@@ -77,22 +83,22 @@ function App() {
         </div>
       </div>
 
-      <div>
-        <button onClick={toggleStartSelect}>
+      <div className="div__modeSelect">
+        <Button id="mode__btn" variant="contained" color="primary" onClick={toggleStartSelect}>
           start
-        </button>
-        <button onClick={toggleEndSelect}>
+        </Button>
+        <Button variant="contained" color="secondary" onClick={toggleEndSelect}>
           end
-        </button>
-        <button onClick={toggleBarrierMode}>
+        </Button>
+        <Button variant="contained" color = "default" onClick={toggleBarrierMode}>
           barriers
-        </button>
-        <button>
+        </Button>
+        <Button variant="contained" color="primary">
           go
-        </button>
-        <button>
-          clear
-        </button>
+        </Button>
+        <Button variant="contained" color="inherit" onClick = {toggleClearSelect}>
+          clear 
+        </Button>
       </div>
 
     </div>
