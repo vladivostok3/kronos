@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <Gridx x={50} y={30} cell_x={cell_x} cell_y={cell_y} />
+      <Gridx x={50} y={30} cell_x={cell_x} cell_y={cell_y} mode={mode} />
       <div>
         <div>
           <ul>

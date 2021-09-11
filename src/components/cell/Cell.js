@@ -3,10 +3,20 @@ import './Cell.css';
 
 const Cell = (props) => {
     //const cellRef = useRef(null);
-    const selectStartNode = (id) => {
+    const selectNode = (id) => {
         //console.log(id)
         const cellDiv = document.getElementById(id)
-        cellDiv.style.background = "chartreuse";
+        if(props.mode == 'start'){
+            cellDiv.style.background = "chartreuse";
+        }
+        if(props.mode == 'end'){
+            cellDiv.style.background = "red";
+        }
+        if(props.mode == 'barrier'){
+            cellDiv.style.background = "black";
+        }
+        
+        
 
     }
 
@@ -14,7 +24,7 @@ const Cell = (props) => {
         <div 
             className="cell" 
             onClick={() => {
-            selectStartNode(props.id)
+            selectNode(props.id)
             }}
             id={props.id}
         > 

@@ -7,16 +7,16 @@ const Gridx = (props) => {
     //console.log(props.y);
     return(
         <div className="gridx_parent">
-            <Row id={"R1"} />
-            <Row id={"R2"} />
-            <Row id={"R3"} />
-            <Row id={"R4"} />
-            <Row id={"R5"} />
-            <Row id={"R6"} />
-            <Row id={"R7"} />
-            <Row id={"R8"} />
-            <Row id={"R9"} />
-            <Row id={"R10"} />
+            <Row id={"R1"} mode={props.mode} />
+            <Row id={"R2"} mode={props.mode} />
+            <Row id={"R3"} mode={props.mode} />
+            <Row id={"R4"} mode={props.mode} />
+            <Row id={"R5"} mode={props.mode} />
+            <Row id={"R6"} mode={props.mode} />
+            <Row id={"R7"} mode={props.mode} />
+            <Row id={"R8"} mode={props.mode} />
+            <Row id={"R9"} mode={props.mode} />
+            <Row id={"R10"} mode={props.mode} />
         </div>
     )
 }
